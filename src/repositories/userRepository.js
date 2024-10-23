@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../models/User');
 
 class UserRepository {
     async createUser(model) {
@@ -13,3 +13,5 @@ class UserRepository {
         return await User.findAll()
     }
 }
+
+module.exports = new UserRepository;

@@ -17,3 +17,5 @@ class UserService {
         return userRepository.findAll();
     }
 }
+
+module.exports = new UserService;

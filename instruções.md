@@ -37,7 +37,7 @@ npm i sequelize
 pasta models 
 new file -> User.js
 
-
-bash 
-git init
+bash
+node src/server.js
+(cri o banco de dados)
 

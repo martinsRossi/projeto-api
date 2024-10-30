@@ -41,3 +41,41 @@ bash
 node src/server.js
 (cri o banco de dados)
 
+SWAGGER
+
+github.com/fernandodomeneghetti
+projeto-api
+src/swagger.json - copiar o arquvio
+colar no arquivo src/swagger.json
+
+bash
+npm i swagger-ui-express
+
+server.js
+//Importamos o Swagger
+const swaggerUI = require('swagger-ui-express');
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(require('./swagger.json')))
+
+bash
+
+
+---
+
+
+criado Dockerfile
+
+bash
+docker container ls
+
+build da imagem
+
+bash
+docker build -t martinsrossi/projeto-api:v1 -f ./Dockerfile .
+
+//o t representa uma tag
+
+docker run -d -p 3000:3000 martinsrossi/projeto-api:v1
+
+//-d desatacha o processo
+//-p 

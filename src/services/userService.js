@@ -10,7 +10,22 @@ class UserService {
     }
 
     async login(username, password) {
-        //TO DO - Arquivo de banco de dados
+       const user = await userRepository.findByUserName(username);
+       
+       if (!user) {
+        throw new Error('Usuario não encontrado');
+
+       }
+       
+       const isValid = await bcrypt.compare(password, user.password)
+
+       if(!isValid) {
+        throw new Error('Senha Inválida');
+       }
+
+       const token = jwt.sign({id: user.id, name: user.name}, 'anchieta', {expiresIn: '24h'});
+       return token;
+
     }
 
     async getUsers() {

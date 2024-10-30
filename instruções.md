@@ -65,6 +65,8 @@ bash
 
 criado Dockerfile
 
+deletar o node_modules
+
 bash
 docker container ls
 
@@ -79,3 +81,5 @@ docker run -d -p 3000:3000 martinsrossi/projeto-api:v1
 
 //-d desatacha o processo
 //-p 
+
+docker push martinsrossi/projeto-api:v1

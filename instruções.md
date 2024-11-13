@@ -30,8 +30,11 @@ npm i jsonwebtoken
 
 bash
 npm i sqlite3
+
 npm i uuid
+
 npm i sequelize
+
 
 
 pasta models 
